@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Dugun_Davet2.Models.Cevap>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <style>
+        *{
+            color:white;
+            background-color: #292929;
+            text-align: center;
+            font-size: 70px;
+            font-family: serif;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width" />
+    <title>Düğüne Katılanlar</title>
+</head>
+<body>
+    <h3>Düğüne Gelenler</h3>
+    <table>
+        <thead>
+            <tr>
+                    <th>Ad</th>
+                    <th>Soyad</th>
+                    <th>Email</th>
+                    <th>Telefon</th>
+                    
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(Dugun_Davet2.Models.Cevap x in Model){
+                <tr>
+                  
+                        <td>@x.Ad</td>
+                        <td>@x.Soyad</td>
+                        <td>@x.Email</td>
+                        <td>@x.Telefon</td>
+
+
+                  
+
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+</body>
+</html>

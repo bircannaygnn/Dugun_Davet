@@ -1,0 +1,49 @@
+﻿@model Dugun_Davet2.Models.Cevap
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <style>
+        *{
+            color:white;
+            background-color: #292929;
+            text-align:center;
+            font-size:70px;
+            font-family:serif;
+        }
+        h1{
+            color: black;
+            text-align: center;
+            font-size: 80px;
+            font-family: serif;
+        }
+
+        a:link{
+            color: black;
+            font-size:50px;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width" />
+    <title>Teşekkürler</title>
+</head>
+<body>
+    <div>
+
+        <h1> Bilgilendirme için Teşekkürler @Model.Ad @Model.Soyad </h1>
+        @if(Model.DuguneGelecekmi == true)
+        {
+            @: Düğüne katılımınız için teşekkür ederiz
+        }
+        else
+        {
+            @: Teşekkürler
+        }
+       
+    </div>
+     Düğüne katılanları görmek için lütfen <a asp-action="CevaplariListele">buraya</a> tıklayınız
+</body>
+</html>

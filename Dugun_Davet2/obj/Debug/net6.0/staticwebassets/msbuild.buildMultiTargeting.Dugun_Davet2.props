@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Dugun_Davet2.props" />
+</Project>
